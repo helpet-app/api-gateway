@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  api-gateway-server:
+    image: ghcr.io/helpet-inc/api-gateway-server:0.0.1-SNAPSHOT
+    container_name: api-gateway-server
+    ports:
+      - '8761:8761'
+    env_file:
+      - .api-gateway-server.env
