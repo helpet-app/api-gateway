@@ -8,3 +8,10 @@ services:
       - '8080:8080'
     env_file:
       - .api-gateway-server.env
+    networks:
+      - helpet-network
+    restart: always
+
+networks:
+  helpet-network:
+    external: true
